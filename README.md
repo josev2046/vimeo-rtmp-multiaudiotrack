@@ -2,7 +2,7 @@
 
 This repository demonstrates **a multi-language live streaming solution using Vimeo**. Separate encoders send language-specific streams to Vimeo, and a web page dynamically switches between them based on user selection.
 
-![multiaudiolive](https://github.com/user-attachments/assets/3cdae3c7-9f5b-49c4-b392-42bd6855026f)
+![multiaudiolive](https://github.com/user-attachments/assets/cdd68dab-66ee-4120-be80-60e6bed9e05f)
 
 
 **Key components:**
