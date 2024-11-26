@@ -2,6 +2,9 @@
 
 This repository demonstrates a multi-language live streaming solution using Vimeo. Separate encoders send language-specific streams to Vimeo, and a web page dynamically switches between them based on user selection.
 
+![image](https://github.com/user-attachments/assets/8762d57a-27e6-46fd-9f47-a858b561126a)
+
+
 **Key components:**
 
 **Multiple Encoders:** Each encoder sends a unique RTMP stream to Vimeo, containing the same video content but with different audio tracks (e.g., Language #1, Language #2, Language #3).
