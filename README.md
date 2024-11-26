@@ -21,7 +21,7 @@ This repository demonstrates **a multi-language live streaming solution using Vi
 
 **How does it work?**
 
-Stream Encoding involves multiple encoders sending individual RTMP streams to Vimeo, each containing a different language audio track. Vimeo assigns unique IDs to each ingested stream. When the web page loads, it initializes the Vimeo player and a dropdown menu for language selection. Upon selecting a language, JavaScript fetches the corresponding stream ID and updates the Vimeo player's source with the new ID, resulting in a seamless audio track switch.
+This solution involves multiple encoders sending individual RTMP streams to Vimeo, each containing a different language audio track. Vimeo assigns unique IDs to each ingested stream. When the webpage loads, it initialises the Vimeo player and a dropdown menu for language selection. Upon selecting a language, JavaScript fetches the corresponding stream ID and updates the Vimeo player's source with the new ID, resulting in a seamless audio track switch.
 
 
 
