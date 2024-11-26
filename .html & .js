@@ -1,13 +1,14 @@
 ├── index.html
 └── script.js
 
-**index.html**
-
-<!DOCTYPE html>
+.html
+  
+  <!DOCTYPE html>
 <html>
 <head>
   <title>Multi-Language Live Stream</title>
   <style>
+    /* Styles for the main page */
     body {
       display: flex;
       align-items: flex-start;
@@ -22,13 +23,13 @@
     .container {
       display: flex;
       gap: 20px;
-      width: 95%; 
-      max-width: 1400px; 
+      width: 95%;
+      max-width: 1400px;
     }
 
     .video-container, .qa-container {
       position: relative;
-      padding-top: 56.25%; 
+      padding-top: 56.25%;
       overflow: hidden;
       flex: 1;
     }
@@ -57,10 +58,9 @@
       <option value="2">Language #3</option>
     </select>
 
-    <div class="video-container" id="video-container">
-    </div>
+    <div class="video-container" id="video-container"></div>
 
-    <div class="qa-container" id="qa-container"></div> 
+    <div class="qa-container" id="qa-container"></div>
   </div>
 
   <script src="script.js"></script>
@@ -68,8 +68,9 @@
 </body>
 </html>
 
-**script.js**
+.js
 
+// Array of Vimeo video IDs for different languages
 const videoIds = [
   'ID#1', 
   'ID#2', 
@@ -77,12 +78,15 @@ const videoIds = [
 ];
 
 function changeStream(index) {
+  // Get references to the video and Q&A containers
   const videoContainer = document.getElementById('video-container');
   const qaContainer = document.getElementById('qa-container');
 
+  // Clear the containers
   videoContainer.innerHTML = '';
   qaContainer.innerHTML = '';
 
+  // Create an iframe for the video stream
   const videoIframe = document.createElement('iframe');
   videoIframe.src = `https://vimeo.com/event/${videoIds[index]}/embed?autoplay=1`;
   videoIframe.frameBorder = '0';
@@ -90,6 +94,7 @@ function changeStream(index) {
   videoIframe.allowFullscreen = true;
   videoContainer.appendChild(videoIframe);
 
+  // Create an iframe for the Q&A section
   const qaIframe = document.createElement('iframe');
   qaIframe.src = `https://vimeo.com/live/interaction_tools/live_event/${videoIds[index]}?module=auto&amp;theme=light`;
   qaIframe.frameBorder = '0';
@@ -98,4 +103,5 @@ function changeStream(index) {
   qaContainer.appendChild(qaIframe);
 }
 
+// Start with the first language stream
 changeStream(0);
