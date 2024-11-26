@@ -35,6 +35,10 @@ This repository demonstrates a multi-language live streaming solution using Vime
 
 
 
+https://github.com/user-attachments/assets/3f0a6550-8537-4ec6-8f23-ea18f1b5c0f8
+
+
+
 **This solution provides:**
 
 **Flexibility:** Easily add or remove languages by adding/removing encoders and updating the stream ID mapping.
