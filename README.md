@@ -65,10 +65,9 @@ This is a basic example and can be further enhanced with features like:
 
 **Automatic language detection:** Detect the user's browser language and pre-select the appropriate stream.
 
-**Subtitles/Closed Captions:** Integrate subtitles or closed captions for accessibility.
+**Subtitles/Closed Captions:** Toggle on Vimeo's player-level subtitles or closed captions for accessibility.
 
 **More sophisticated UI:** Improve the user interface for language selection and other controls.
 
 **Error handling:** Implement error handling for scenarios like stream unavailability.
 
-**Adaptive streaming:** Utilize Vimeo's adaptive streaming capabilities for optimal playback quality.
