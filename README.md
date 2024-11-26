@@ -21,53 +21,9 @@ This repository demonstrates **a multi-language live streaming solution using Vi
 
 **How does it work?**
 
-**Stream Encoding:** Multiple encoders send individual RTMP streams to Vimeo, each with a different language audio track.
-
-**Stream IDs:** Vimeo assigns unique IDs to each ingested stream.
-
-**Web Page Loading:** The web page loads the Vimeo player and a dropdown menu for language selection.
-
-**Language Selection:** The user selects a language from the dropdown.
-
-**JavaScript Action:** JavaScript fetches the corresponding stream ID based on the selected language.
-
-**Vimeo Player Update:** The Vimeo player's source is updated with the new stream ID, seamlessly switching the audio track.
+Stream Encoding involves multiple encoders sending individual RTMP streams to Vimeo, each containing a different language audio track. Vimeo assigns unique IDs to each ingested stream. When the web page loads, it initializes the Vimeo player and a dropdown menu for language selection. Upon selecting a language, JavaScript fetches the corresponding stream ID and updates the Vimeo player's source with the new ID, resulting in a seamless audio track switch.
 
 
 
 https://github.com/user-attachments/assets/3f0a6550-8537-4ec6-8f23-ea18f1b5c0f8
-
-
-
-**This solution provides:**
-
-**Flexibility:** Easily add or remove languages by adding/removing encoders and updating the stream ID mapping.
-
-**Scalability:** Vimeo handles the streaming infrastructure, allowing for a large number of viewers.
-
-**User Experience:** Viewers can seamlessly switch between languages without interrupting the video stream.
-
-
-
-**Implementation:**
-
-**Obtain Vimeo Stream IDs:** Create live events on Vimeo for each language and obtain their unique IDs.
-
-**Update videoIds array:** In script.js, replace the placeholder IDs (ID#1, ID#2, etc.) with your actual Vimeo stream IDs.
-
-**Update Language Labels:** In index.html, change the language labels in the dropdown (Language #1, Language #2, etc.) to match your actual languages.
-
-**Host the files:** Host index.html and script.js on a web server.
-
-**Open index.html in a browser:** Access the hosted index.html file to view the multi-language live stream.
-
-This is a basic example and can be further enhanced with features like:
-
-**Automatic language detection:** Detect the user's browser language and pre-select the appropriate stream.
-
-**Subtitles/Closed Captions:** Toggle on Vimeo's player-level subtitles or closed captions for accessibility.
-
-**More sophisticated UI:** Improve the user interface for language selection and other controls.
-
-**Error handling:** Implement error handling for scenarios like stream unavailability.
 
