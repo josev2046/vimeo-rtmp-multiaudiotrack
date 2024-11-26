@@ -7,15 +7,15 @@ This repository demonstrates **a multi-language live streaming solution using Vi
 
 **Key components:**
 
-**Multiple Encoders:** Each encoder sends a unique RTMP stream to Vimeo, containing the same video content but with different audio tracks (e.g., Language #1, Language #2, Language #3).
+-**Multiple Encoders:** Each encoder sends a unique RTMP stream to Vimeo, containing the same video content but with different audio tracks (e.g., Language #1, Language #2, Language #3).
 
-**Vimeo Platform:** Vimeo ingests the streams and provides unique IDs for each.
+-**Vimeo Platform:** Vimeo ingests the streams and provides unique IDs for each.
 
-**Web Server:** Hosts the HTML, JavaScript, and a mapping between language selections and Vimeo stream IDs.
+-**Web Server:** Hosts the HTML, JavaScript, and a mapping between language selections and Vimeo stream IDs.
 
-**Vimeo Player:** An embedded Vimeo player on the web page displays the selected stream.
+-**Vimeo Player:** An embedded Vimeo player on the web page displays the selected stream.
 
-**JavaScript Logic:** Handles user language selection and dynamically updates the Vimeo player's source URL to switch between streams.
+-**JavaScript Logic:** Handles user language selection and dynamically updates the Vimeo player's source URL to switch between streams.
 
 
 
