@@ -2,11 +2,10 @@
 !include <C4/C4_Container>
 
 System_Boundary(c1, "Live Streaming Environment") {
-
-  System(encoder1, "Encoder 1", "Encodes video with French audio", "Encoder")
-  System(encoder2, "Encoder 2", "Encodes video with Slovak audio", "Encoder")
-  System(encoder3, "Encoder 3", "Encodes video with Polish audio", "Encoder")
-  System(encoder4, "Encoder 4", "Encodes video with English audio", "Encoder")
+  System(encoder1, "Encoder 1", "Encodes video with French audio", "OBS Studio")
+  System(encoder2, "Encoder 2", "Encodes video with Spanish audio", "vMix")
+  System(encoder3, "Encoder 3", "Encodes video with German audio", "Hardware Encoder")
+  System(encoder4, "Encoder 4", "Encodes video with English audio", "Telestream Wirecast")
 
   System(vimeo_platform, "Vimeo Platform", "Ingests, processes, and delivers live streams with unique IDs")
 
@@ -14,18 +13,18 @@ System_Boundary(c1, "Live Streaming Environment") {
   Rel(encoder2, vimeo_platform, "Streams to", "RTMP")
   Rel(encoder3, vimeo_platform, "Streams to", "RTMP")
   Rel(encoder4, vimeo_platform, "Streams to", "RTMP") 
-
-  System_Boundary(c2, "Web Page") {
-    System(web_server, "Web Server", "Hosts HTML, JavaScript, and language mapping")
-    Rel_Up(web_server, vimeo_platform, "Retrieves stream ID", "API call")
-
-    System(vimeo_player, "Vimeo Player", "Embedded player with language selection")
-    Rel_Up(vimeo_player, web_server, "Fetches stream URL", "JavaScript, API call")
-  }
-
-  Person_Ext(viewer, "Viewer", "Watches live event and selects language")
-  Rel(viewer, vimeo_player, "Interacts with", "Selects language")  
 }
+
+System_Boundary(c2, "Web Page") {
+  System(web_server, "Web Server", "Hosts HTML, JavaScript, and language mapping")
+  Rel_Up(web_server, vimeo_platform, "Retrieves stream ID", "API call")
+
+  System(vimeo_player, "Vimeo Player", "Embedded player with language selection")
+  Rel_Up(vimeo_player, web_server, "Fetches stream URL", "JavaScript, API call")
+}
+
+Person_Ext(viewer, "Viewer", "Watches live event and selects language")
+Rel(viewer, vimeo_player, "Interacts with", "Selects language")  
 
 SHOW_LEGEND()
 @enduml
