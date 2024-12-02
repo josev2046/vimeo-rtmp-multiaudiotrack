@@ -88,9 +88,10 @@ function changeStream(index) {
 
   // Create an iframe for the video stream
   const videoIframe = document.createElement('iframe');
-  videoIframe.src = `https://vimeo.com/event/${videoIds[index]}/embed?autoplay=1`;
+  videoIframe.src = `https://vimeo.com/event/${videoIds[index]}/embed?autoplay=1&fullscreen=1&pip=1`;
+  //videoIframe.src = `https://vimeo.com/event/${videoIds[index]}/embed?autoplay=1`;
   videoIframe.frameBorder = '0';
-  videoIframe.allow = 'autoplay; fullscreen; picture-in-picture';
+  //videoIframe.allow = 'autoplay; fullscreen; picture-in-picture';
   videoIframe.allowFullscreen = true;
   videoContainer.appendChild(videoIframe);
 
