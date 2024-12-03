@@ -4,7 +4,7 @@ This repository demonstrates **a multi-language live streaming solution using Vi
 
 The key components of this solution are:
 
-- **Multiple encoders.** Each encoder sends a unique RTMP stream to Vimeo, containing the same video content but with different audio tracks, each in a different language.
+- **Multiple encoders.** Each encoder sends a unique RTMP stream to Vimeo (each one associated to a unique event ID), containing the same video content but with different audio tracks, each in a different language. Encoder setup details are available here: https://help.vimeo.com/hc/en-us/articles/12426941474449-Overview-Create-and-go-live-to-an-event
 
 - **The Vimeo platform.** Vimeo ingests the streams and provides unique IDs for each.
 
