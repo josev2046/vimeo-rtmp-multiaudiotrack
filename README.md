@@ -30,6 +30,11 @@ The following short video shows the solution in action:
 https://github.com/user-attachments/assets/13a69c62-7a60-4f85-b313-32c594c8c077
 
 
+[![DOI](https://zenodo.org/badge/894666533.svg)](https://doi.org/10.5281/zenodo.15033379)
+
+
+
+
 
 
 
